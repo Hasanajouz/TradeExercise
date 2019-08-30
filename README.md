@@ -23,6 +23,7 @@ The purpose of this exercise is to Accept or Reject trades grouped by Correlatio
 
 **Note:** The app is not well optimized for memory consumption due to lack of time.
 
+**Note:** open file dialog removed because it is using win32 library which needs to be loaded manually. So i decided to remove it so the code will work directly when you download it as zip file. So please just enter the file path manually. 
 
 
 # MVVM Architecture in this project
