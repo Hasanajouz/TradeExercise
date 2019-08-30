@@ -158,6 +158,10 @@ namespace Trades.ViewModels
 
         private void LoadFileDialog()
         {
+            CalcBtnVisible = false;
+            TradesGridVisible = false;
+            CalcGridVisible = false;
+            ErrorMsg = "";
             TradesXMLHelper thlp = new TradesXMLHelper();
             try
             {

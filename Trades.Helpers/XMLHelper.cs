@@ -18,9 +18,11 @@ namespace Trades.Helpers
 
         public bool IsGoodTradeXmlFile(string uri)
         {
-            XmlReader reader = new XmlTextReader(uri);
-            XmlSerializer serializer = new XmlSerializer(typeof(TradesList));
-            return serializer.CanDeserialize(reader);
+            using (XmlReader reader = new XmlTextReader(uri))
+            {
+                XmlSerializer serializer = new XmlSerializer(typeof(TradesList));
+                return serializer.CanDeserialize(reader);
+            }
         }
 
         public TradesList GetTradesFromXmlFile(string uri)
