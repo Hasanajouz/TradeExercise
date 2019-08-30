@@ -65,6 +65,7 @@
                   HorizontalGridLinesBrush="LightGray" 
                   VerticalGridLinesBrush="LightGray"
                   RowHeaderWidth="0"
+                  Height="170"
                   Visibility="{Binding TradesGridVisible, Converter={StaticResource VisibleIfTrueConverter}, FallbackValue=Hidden}"
                   >
             <DataGrid.Resources>
@@ -102,18 +103,19 @@
                   HorizontalGridLinesBrush="LightGray" 
                   VerticalGridLinesBrush="LightGray"
                   RowHeaderWidth="0"
+                  Height="120"
                   Visibility="{Binding CalcGridVisible, Converter={StaticResource VisibleIfTrueConverter}, FallbackValue=Hidden}">
             <DataGrid.RowStyle>
                 <Style TargetType="DataGridRow">
                     <Style.Triggers>
                         <DataTrigger Binding="{Binding State}" Value="1">
-                            <Setter Property="Background" Value="#00b0f0"></Setter>
+                            <Setter Property="Background" Value="Maroon"></Setter>
                         </DataTrigger>
                         <DataTrigger Binding="{Binding State}" Value="2">
-                            <Setter Property="Background" Value="#92d050"></Setter>
+                            <Setter Property="Background" Value="Orange"></Setter>
                         </DataTrigger>
                         <DataTrigger Binding="{Binding State}" Value="3">
-                            <Setter Property="Background" Value="#ffff00"></Setter>
+                            <Setter Property="Background" Value="Green"></Setter>
                         </DataTrigger>
                     </Style.Triggers>
                 </Style>

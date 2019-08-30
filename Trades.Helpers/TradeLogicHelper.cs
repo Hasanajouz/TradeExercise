@@ -37,8 +37,9 @@ namespace Trades.Helpers
 
         #region Public Method
 
-       
+
         //check if there are some rows with same tradeId which is wrong
+        //not good for memory consumption  just made to show the case
         public bool CheckNotSameTradeId(List<Trade> trades)
         {
             int tradesCount = trades.GroupBy(t => t.TradeID).Count();
@@ -50,7 +51,7 @@ namespace Trades.Helpers
         }
 
         //check some constrains on data in each group
-        //
+        //not good for memory consumption  just made to show the case
         public List<TradingGroupStatus> CheckGroupsError(List<Trade> trades)
         {
             List<TradingGroupStatus> tgStateList = new List<TradingGroupStatus>();

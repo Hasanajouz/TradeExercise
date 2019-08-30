@@ -13,7 +13,7 @@ namespace Trades.Models
         [XmlAttribute(AttributeName = "Limit")]
         public double Limit { get; set; }
         [XmlAttribute(AttributeName = "TradeID")]
-        public int TradeID { get; set; }
+        public string TradeID { get; set; }
         [XmlText]
         public double Value { get; set; }
     }
