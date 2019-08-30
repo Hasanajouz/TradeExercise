@@ -116,6 +116,8 @@ After, I created the view main page.
 
 And I tried to show small example about local styles.
 
+![alt text](https://raw.githubusercontent.com/hasanajouz/TradeExercise/master/Images/localstyles.jpg)
+
 ![alt text](https://raw.githubusercontent.com/hasanajouz/TradeExercise/master/Images/ui1.jpg)
 
 ![alt text](https://raw.githubusercontent.com/hasanajouz/TradeExercise/master/Images/ui2.jpg)
