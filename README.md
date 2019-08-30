@@ -90,6 +90,8 @@ So i checked them in the app and i made tests to check them.
 # Log4net
 It is one of the best loggers for .net projects.
 
+I used it with minimal configrations.
+
 The file is saved as "server.log" on the same path as the exe path.
 
 I dealt with different types of log: errors, exceptions, info...
