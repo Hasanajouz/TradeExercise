@@ -169,6 +169,8 @@ namespace Trades.ViewModels
                         logger.LogInfoMessage($"file loaded successfully");
                         CalcBtnVisible = true;
                         TradesGridVisible = true;
+                        CalcGridVisible = false;
+                        ErrorMsg = "";
                     }
                     catch (Exception ex)
                     {
