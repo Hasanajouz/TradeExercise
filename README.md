@@ -5,7 +5,7 @@ Here is a small documentation covering the steps I made to finish this exercise.
 
 The purpose of this exercise is to Accept or Reject trades grouped by CorrelationID based on a limit.
 
-**About The Program**
+**About the Program**
 
 -type: WPF
 
@@ -19,7 +19,7 @@ The purpose of this exercise is to Accept or Reject trades grouped by Correlatio
 
 **Note:** the only third party library used is Log4net. Everything else it written by me.
 
-**Note:** I tried to show a little from everything: UI, Arcitecture...
+**Note:** I tried to show a little from everything: UI, Architecture...
 
 **Note:** The app is not well optimized for memory consumption due to lack of time.
 
@@ -27,7 +27,7 @@ The purpose of this exercise is to Accept or Reject trades grouped by Correlatio
 
 # MVVM Architecture in this project
 As this is a small app, I should have used models, views and viewmodels inside the same project.
-But I decided to add them in separate projects because I want to show how big projects hould be architectured.
+But I decided to add them in separate projects because I want to show how the architecture should be in big projects.
 When you develop big projects then a small folder to handle models or view models will not be a good practice, especially if you are going to reuse this code in other projects.
 
 ![alt text](https://raw.githubusercontent.com/hasanajouz/TradeExercise/master/Images/Projects.jpg)
@@ -36,14 +36,14 @@ When you develop big projects then a small folder to handle models or view model
 There are more than one model in this program.
 -Trade is a class with some XML attributes to represent the data from the XML file
 -TradeResult is a class to represent the final result. One of its properties is the State.
--State is and enum with three options (Pending, Regected, Accepted)
+-State is and enum with three options (Pending, Rejected, Accepted)
 and some other helping models.
 
 # Helpers
 In helpers project we can find all the classes related to:
 1-XMLHelper: to deal with everything about XML.
 2-CSVHelper: to deal with everything related to CSV.
-3-LogicHelper: to make all the trades logic and clculate the state.
+3-LogicHelper: to make all the trades logic and calculate the state.
 4-Logger: it has an interface to deal with Log4net logger and created my own simple class to register logs.
 5-MockDataStore: to create simple data to be used in the testing.
 
@@ -59,7 +59,7 @@ And I tried to cover all fields and methods with my tests
 # Special Cases
 I tried to cover some cases to check the list of trades before processing.
 It should be changed because it takes more memory and cpu.
-I just added it to show my some analysis skills.
+I just added it to show some of my analysis skills.
 For example: if there is more than a row with the same TradeID.
 or one of the groups of CorrelationId doesn't have the same limit or number of trades.
 or there are more trades than the number of trades.
