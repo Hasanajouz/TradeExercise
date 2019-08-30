@@ -3,19 +3,41 @@ An Exercise for digistrat consulting
 
 Here is a small documentation covering the steps I made to finish this exercise.
 
-The purpose of this exercise is to Accept or Reject trades grouped by CorrelationID based on a limit.  
+The purpose of this exercise is to Accept or Reject trades grouped by CorrelationID based on a limit.
+
+**About The Program**
+
+-type: WPF
+
+-Architecture: MVVM
+
+-Testing: MS unit test
+
+-Logging: log4net
+
+-Style: Dark Mode
+
+**Note:** the only third party library used is Log4net. Everything else it written by me.
+
+**Note:** I tried to show a little from everything: UI, Arcitecture...
+
+**Note:** The app is not well optimized for memory consumption due to lack of time.
+
+
 
 # MVVM Architecture in this project
 As this is a small app, I should have used models, views and viewmodels inside the same project.
 But I decided to add them in separate projects because I want to show how big projects hould be architectured.
 When you develop big projects then a small folder to handle models or view models will not be a good practice, especially if you are going to reuse this code in other projects.
 
-![alt text](https://raw.githubusercontent.com/hasanajouz/Options-Pricer-Exercise/master/Images/projects.jpg)
+![alt text](https://raw.githubusercontent.com/hasanajouz/TradeExercise/master/Images/Projects.jpg)
 
-# Model
-In this app there will be only one model to handle everything I called it: BlacksCholes
-
-![alt text](https://raw.githubusercontent.com/hasanajouz/Options-Pricer-Exercise/master/Images/model.jpg)
+# Models
+There are more than one model in this program.
+-Trade is a class with some XML attributes to represent the data from the XML file
+-TradeResult is a class to represent the final result. One of its properties is the State.
+-State is and enum with three options (Pending, Regected, Accepted)
+and some other helping models.
 
 # Calculations
 all the calculations will be in the helper projects.
