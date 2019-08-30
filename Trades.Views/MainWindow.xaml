@@ -65,7 +65,7 @@
                   HorizontalGridLinesBrush="LightGray" 
                   VerticalGridLinesBrush="LightGray"
                   RowHeaderWidth="0"
-                  Height="170"
+                  Height="180"
                   Visibility="{Binding TradesGridVisible, Converter={StaticResource VisibleIfTrueConverter}, FallbackValue=Hidden}"
                   >
             <DataGrid.Resources>
@@ -103,7 +103,7 @@
                   HorizontalGridLinesBrush="LightGray" 
                   VerticalGridLinesBrush="LightGray"
                   RowHeaderWidth="0"
-                  Height="120"
+                  Height="150"
                   Visibility="{Binding CalcGridVisible, Converter={StaticResource VisibleIfTrueConverter}, FallbackValue=Hidden}">
             <DataGrid.RowStyle>
                 <Style TargetType="DataGridRow">
