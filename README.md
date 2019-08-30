@@ -4,6 +4,7 @@ An Exercise for digistrat consulting
 Here is a small documentation covering the steps I made to finish this exercise.
 
 The purpose of this exercise is to Accept or Reject trades grouped by CorrelationID based on a limit.
+
 **About The Program**
 
 -type: WPF
