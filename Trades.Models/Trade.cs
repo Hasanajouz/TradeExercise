@@ -11,10 +11,10 @@ namespace Trades.Models
         [XmlAttribute(AttributeName = "NumberOfTrades")]
         public int NumberOfTrades { get; set; }
         [XmlAttribute(AttributeName = "Limit")]
-        public double Limit { get; set; }
+        public int Limit { get; set; }
         [XmlAttribute(AttributeName = "TradeID")]
         public string TradeID { get; set; }
         [XmlText]
-        public double Value { get; set; }
+        public int Value { get; set; }
     }
 }
