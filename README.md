@@ -34,17 +34,26 @@ When you develop big projects then a small folder to handle models or view model
 
 # Models
 There are more than one model in this program.
+
 -Trade is a class with some XML attributes to represent the data from the XML file
+
 -TradeResult is a class to represent the final result. One of its properties is the State.
+
 -State is and enum with three options (Pending, Rejected, Accepted)
+
 and some other helping models.
 
 # Helpers
 In helpers project we can find all the classes related to:
+
 1-XMLHelper: to deal with everything about XML.
+
 2-CSVHelper: to deal with everything related to CSV.
+
 3-LogicHelper: to make all the trades logic and calculate the state.
+
 4-Logger: it has an interface to deal with Log4net logger and created my own simple class to register logs.
+
 5-MockDataStore: to create simple data to be used in the testing.
 
 # Unit Testing
