@@ -1,0 +1,7 @@
+<Trades>
+	<Trade CorrelationId="1" NumberOfTD="654">100</Trade>
+	<Trade CorrelationId="234" NumberOfTrades="3" Limit="1000" TradeID="658">100</Trade>
+	<Trade CorrelationId="234" NumberOfTrades="2" Limit="1000" TradeID="135">200</Trade>
+	<Trade CorrelationId="222" NumberOfTrades="1" Limit="OfTrades="3" Limit="1000" TradeID="652">200</Trade>
+	<Trade CorrelationId="200" NumberOfTrades="2" Limit="1000" TradeID="645">1000</Trade>
+</Trades>
