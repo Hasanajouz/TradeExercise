@@ -7,7 +7,7 @@ namespace Trades.Models
     public class Trade
     {
         [XmlAttribute(AttributeName = "CorrelationId")]
-        public int CorrelationId { get; set; }
+        public string CorrelationId { get; set; }
         [XmlAttribute(AttributeName = "NumberOfTrades")]
         public int NumberOfTrades { get; set; }
         [XmlAttribute(AttributeName = "Limit")]
