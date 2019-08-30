@@ -39,22 +39,39 @@ There are more than one model in this program.
 -State is and enum with three options (Pending, Regected, Accepted)
 and some other helping models.
 
-# Calculations
-all the calculations will be in the helper projects.
-there will be two files
-1- BlacksCholesCalculator.cs to calculate the pricing using Blacks Choles way.
-2-NormalDistributionHelper to calculate the normal distribution because it is used in one of the formulas of calculating the call price.
-I tried more than one method to calculate Normal Distribution because i was searching for one which gives the more accurate result.
-I found one in the internet that passed all my tests to give exact the same results as the suggested website.
+# Helpers
+In helpers project we can find all the classes related to:
+1-XMLHelper: to deal with everything about XML.
+2-CSVHelper: to deal with everything related to CSV.
+3-LogicHelper: to make all the trades logic and clculate the state.
+4-Logger: it has an interface to deal with Log4net logger and created my own simple class to register logs.
+5-MockDataStore: to create simple data to be used in the testing.
 
 # Unit Testing
 As it is a small app, I made unit testing with ms unit testing.
 It is just simple values check.
 And I tried to cover all fields and methods with my tests
 
-![alt text](https://raw.githubusercontent.com/hasanajouz/Options-Pricer-Exercise/master/Images/unitTest.jpg)
+![alt text](https://raw.githubusercontent.com/hasanajouz/TradeExercise/master/Images/tests1.jpg)
 
-![alt text](https://raw.githubusercontent.com/hasanajouz/Options-Pricer-Exercise/master/Images/function_tested.jpg)
+![alt text](https://raw.githubusercontent.com/hasanajouz/TradeExercise/master/Images/tests2.jpg)
+
+# Special Cases
+I tried to cover some cases to check the list of trades before processing.
+It should be changed because it takes more memory and cpu.
+I just added it to show my some analysis skills.
+For example: if there is more than a row with the same TradeID.
+or one of the groups of CorrelationId doesn't have the same limit or number of trades.
+or there are more trades than the number of trades.
+Those are all logical mistakes.
+So i checked them in the app and i made tests to check them.
+
+# Log4net
+It is one of the best loggers for .net projects.
+The file is saved as "server.log" on the same path as the exe path.
+I dealt with different types of log: errors, exceptions, info...
+What I didn't cover in this app is the global exception handling.
+
 
 # View Model
 After all the tests went well. I started to implement the UI.
@@ -63,16 +80,20 @@ I created the base view model which all the view models will inherit from.
 It handles all common properties and specially the "PropertyChangedEventHandler"
 and I created a basic class to inherit from ICommand to handle commands. it is called “DelegateCommand"
 
+![alt text](https://raw.githubusercontent.com/hasanajouz/TradeExercise/master/Images/viewmodels.jpg)
+
+
+
 # UI and Binding
-After I created the view main page.
+After, I created the view main page.
 And I tried to show small example about local styles.
-![alt text](https://raw.githubusercontent.com/hasanajouz/Options-Pricer-Exercise/master/Images/binding.jpg)
 
-![alt text](https://raw.githubusercontent.com/hasanajouz/Options-Pricer-Exercise/master/Images/empty_ui.jpg)
+![alt text](https://raw.githubusercontent.com/hasanajouz/TradeExercise/master/Images/ui1.jpg)
 
-![alt text](https://raw.githubusercontent.com/hasanajouz/Options-Pricer-Exercise/master/Images/ui_with_error_message.jpg)
+![alt text](https://raw.githubusercontent.com/hasanajouz/TradeExercise/master/Images/ui2.jpg)
 
-![alt text](https://raw.githubusercontent.com/hasanajouz/Options-Pricer-Exercise/master/Images/ui_example_1.jpg)
+![alt text](https://raw.githubusercontent.com/hasanajouz/TradeExercise/master/Images/error.jpg)
+
 
 
 
