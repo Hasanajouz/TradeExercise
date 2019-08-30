@@ -27,7 +27,9 @@ The purpose of this exercise is to Accept or Reject trades grouped by Correlatio
 
 # MVVM Architecture in this project
 As this is a small app, I should have used models, views and viewmodels inside the same project.
+
 But I decided to add them in separate projects because I want to show how the architecture should be in big projects.
+
 When you develop big projects then a small folder to handle models or view models will not be a good practice, especially if you are going to reuse this code in other projects.
 
 ![alt text](https://raw.githubusercontent.com/hasanajouz/TradeExercise/master/Images/Projects.jpg)
@@ -58,7 +60,9 @@ In helpers project we can find all the classes related to:
 
 # Unit Testing
 As it is a small app, I made unit testing with ms unit testing.
+
 It is just simple values check.
+
 And I tried to cover all fields and methods with my tests
 
 ![alt text](https://raw.githubusercontent.com/hasanajouz/TradeExercise/master/Images/tests1.jpg)
@@ -67,26 +71,40 @@ And I tried to cover all fields and methods with my tests
 
 # Special Cases
 I tried to cover some cases to check the list of trades before processing.
+
 It should be changed because it takes more memory and cpu.
+
 I just added it to show some of my analysis skills.
+
 For example: if there is more than a row with the same TradeID.
+
 or one of the groups of CorrelationId doesn't have the same limit or number of trades.
+
 or there are more trades than the number of trades.
+
 Those are all logical mistakes.
+
 So i checked them in the app and i made tests to check them.
 
 # Log4net
 It is one of the best loggers for .net projects.
+
 The file is saved as "server.log" on the same path as the exe path.
+
 I dealt with different types of log: errors, exceptions, info...
+
 What I didn't cover in this app is the global exception handling.
 
 
 # View Model
 After all the tests went well. I started to implement the UI.
+
 So, I started with the view model.
+
 I created the base view model which all the view models will inherit from.
+
 It handles all common properties and specially the "PropertyChangedEventHandler"
+
 and I created a basic class to inherit from ICommand to handle commands. it is called “DelegateCommand"
 
 ![alt text](https://raw.githubusercontent.com/hasanajouz/TradeExercise/master/Images/viewmodels.jpg)
@@ -95,6 +113,7 @@ and I created a basic class to inherit from ICommand to handle commands. it is c
 
 # UI and Binding
 After, I created the view main page.
+
 And I tried to show small example about local styles.
 
 ![alt text](https://raw.githubusercontent.com/hasanajouz/TradeExercise/master/Images/ui1.jpg)
