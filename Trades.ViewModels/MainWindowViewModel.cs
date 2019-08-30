@@ -1,7 +1,8 @@
-﻿using Microsoft.Win32;
+﻿//using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Windows.Input;
 using Trades.Helpers;
 using Trades.Models;
@@ -15,7 +16,7 @@ namespace Trades.ViewModels
         public MainWindowViewModel()
         {
             Title = "Trades Exercise";
-            logger.LogInfoMessage("\nApplication Started.");
+            logger.LogInfoMessage("Application Started.\n=========================================================");
         }
 
         #region Properties
@@ -91,14 +92,14 @@ namespace Trades.ViewModels
             set { SetProperty(ref calcGridVisible, value); }
         }
 
-        public ICommand OpenFileDialogCommand
-        {
-            get { return new DelegateCommand(OpenFileDialog); }
-        }
+        //public ICommand OpenFileDialogCommand
+        //{
+        //    get { return new DelegateCommand(OpenFileDialog); }
+        //}
 
         public ICommand SaveFileDialogCommand
         {
-            get { return new DelegateCommand(SaveFileDialog); }
+            get { return new DelegateCommand(SaveFile); }
         }
 
         public ICommand LoadFileDialogCommand
@@ -118,41 +119,41 @@ namespace Trades.ViewModels
         #endregion
 
         #region Commands
-        private void OpenFileDialog()
-        {
-            OpenFileDialog dlg = new OpenFileDialog();
-            dlg.DefaultExt = ".xml";
-            dlg.Filter = "XML Files (*.xml)|*.xml";
+        //private void OpenFile()
+        //{
+        //    OpenFileDialog dlg = new OpenFileDialog();
+        //    dlg.DefaultExt = ".xml";
+        //    dlg.Filter = "XML Files (*.xml)|*.xml";
 
-            if (dlg.ShowDialog() == true)
+        //    if (dlg.ShowDialog() == true)
+        //    {
+        //        FilePath = dlg.FileName;
+        //        logger.LogInfoMessage($"File is choosen: {FilePath}");
+        //    }
+
+        //}
+
+        private void SaveFile()
+        {
+            //SaveFileDialog dlg = new SaveFileDialog();
+            //dlg.DefaultExt = ".csv";
+            //dlg.Filter = "CSV Files (*.csv)|*.csv";
+
+
+            try
             {
-                FilePath = dlg.FileName;
-                logger.LogInfoMessage($"File is choosen: {FilePath}");
+                TradesCSVHelper tchlp = new TradesCSVHelper();
+                string savedPath = Path.GetDirectoryName(FilePath) + "\\" + Path.GetFileNameWithoutExtension(FilePath) + "_result.csv";
+                tchlp.ConvertToCSV(TradesResult,savedPath );
+                logger.LogInfoMessage($"CSV fild saved to: {savedPath}");
+                SuccMsg = "CSV file is saved successfully in the same path as the loaded file";
+            }
+            catch (Exception ex)
+            {
+                ErrorMsg = "An Exception has occured while saving. check server.log file for more detail. ";
+                logger.LogException(ex);
             }
 
-        }
-
-        private void SaveFileDialog()
-        {
-            SaveFileDialog dlg = new SaveFileDialog();
-            dlg.DefaultExt = ".csv";
-            dlg.Filter = "CSV Files (*.csv)|*.csv";
-
-            if (dlg.ShowDialog() == true)
-            {
-                try
-                {
-                    TradesCSVHelper tchlp = new TradesCSVHelper();
-                    tchlp.ConvertToCSV(TradesResult, dlg.FileName);
-                    logger.LogInfoMessage($"CSV fild saved to: {dlg.FileName}");
-                    SuccMsg = "CSV file is saved successfully";
-                }
-                catch (Exception ex)
-                {
-                    ErrorMsg = "An Exception has occured while saving. check server.log file for more detail. ";
-                    logger.LogException(ex);
-                }
-            }
 
         }
 

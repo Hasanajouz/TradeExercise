@@ -48,9 +48,9 @@
         <TextBlock Grid.Column="1" Grid.Row="2" Text="{Binding ErrorMsg}" Foreground="OrangeRed" TextAlignment="Center" Grid.ColumnSpan="3"/>
         <TextBlock Grid.Column="1" Grid.Row="2" Text="{Binding SuccMsg}" Foreground="LimeGreen" TextAlignment="Center" Grid.ColumnSpan="3"/>
 
-        <TextBlock Grid.Column="1" Grid.Row="3" Text="Trades File" Style="{StaticResource LabelStyle}"/>
-        <TextBox Grid.Column="2" Grid.Row="3" Text="{Binding FilePath}" IsEnabled="False"  Width="350" Margin="5,7" TextAlignment="Left" FontSize="12"/>
-        <Button Grid.Column="3" Grid.Row="3" Content=" Browse " Style="{StaticResource ButtonStyle}" Command="{Binding OpenFileDialogCommand}" FontSize="10"/>
+        <TextBlock Grid.Column="1" Grid.Row="3" Text="Enter file path" Style="{StaticResource LabelStyle}"/>
+        <TextBox Grid.Column="2" Grid.Row="3" Text="{Binding FilePath,UpdateSourceTrigger=PropertyChanged}"    Width="350" Margin="5,7" TextAlignment="Left" FontSize="12"/>
+        <!--<Button Grid.Column="3" Grid.Row="3" Content=" Browse " Style="{StaticResource ButtonStyle}" Command="{Binding OpenFileDialogCommand}" FontSize="10"/>-->
 
         <Button Grid.Column="2" Grid.Row="4" Content=" Load " Visibility="{Binding LoadBtnVisible, Converter={StaticResource VisibleIfTrueConverter}, FallbackValue=Hidden}" Style="{StaticResource ButtonStyle}" Command="{Binding LoadFileDialogCommand}" Width="100" HorizontalAlignment="Left"/>
 
