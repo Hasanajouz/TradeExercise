@@ -1,4 +1,4 @@
-# TradeExercise
+# Trade Exercise
 An Exercise for digistrat consulting
 
 Here is a small documentation covering the steps I made to finish this exercise.
