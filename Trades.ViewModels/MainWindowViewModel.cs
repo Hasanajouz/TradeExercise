@@ -92,10 +92,6 @@ namespace Trades.ViewModels
             set { SetProperty(ref calcGridVisible, value); }
         }
 
-        //public ICommand OpenFileDialogCommand
-        //{
-        //    get { return new DelegateCommand(OpenFileDialog); }
-        //}
 
         public ICommand SaveFileDialogCommand
         {
@@ -119,26 +115,8 @@ namespace Trades.ViewModels
         #endregion
 
         #region Commands
-        //private void OpenFile()
-        //{
-        //    OpenFileDialog dlg = new OpenFileDialog();
-        //    dlg.DefaultExt = ".xml";
-        //    dlg.Filter = "XML Files (*.xml)|*.xml";
-
-        //    if (dlg.ShowDialog() == true)
-        //    {
-        //        FilePath = dlg.FileName;
-        //        logger.LogInfoMessage($"File is choosen: {FilePath}");
-        //    }
-
-        //}
-
         private void SaveFile()
         {
-            //SaveFileDialog dlg = new SaveFileDialog();
-            //dlg.DefaultExt = ".csv";
-            //dlg.Filter = "CSV Files (*.csv)|*.csv";
-
 
             try
             {
