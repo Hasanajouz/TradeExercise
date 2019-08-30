@@ -96,6 +96,9 @@ I dealt with different types of log: errors, exceptions, info...
 
 What I didn't cover in this app is the global exception handling.
 
+![alt text](https://raw.githubusercontent.com/hasanajouz/TradeExercise/master/Images/logsample.jpg)
+
+![alt text](https://raw.githubusercontent.com/hasanajouz/TradeExercise/master/Images/error.jpg)
 
 # View Model
 After all the tests went well. I started to implement the UI.
