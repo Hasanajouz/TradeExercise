@@ -5,14 +5,23 @@ Here is a small documentation covering the steps I made to finish this exercise.
 
 The purpose of this exercise is to Accept or Reject trades grouped by CorrelationID based on a limit.
 **About The Program**
+
 -type: WPF
+
 -Architecture: MVVM
+
 -Testing: MS unit test
+
 -Logging: log4net
+
 -Style: Dark Mode
+
 **Note:** the only third party library used is Log4net. Everything else it written by me.
+
 **Note:** I tried to show a little from everything: UI, Arcitecture...
+
 **Note:** The app is not well optimized for memory consumption due to lack of time.
+
 
 
 # MVVM Architecture in this project
